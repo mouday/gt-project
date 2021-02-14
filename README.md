@@ -13,8 +13,12 @@ $ wget https://raw.githubusercontent.com/mouday/gt-project/main/gt.sh -O /usr/lo
 # 2、赋予执行权限
 $ chmod +x /usr/local/bin/gt
 
-# 3、使用帮助
+# 3、下载flask模板文件
+$ gt flask.py
+
+# 4、使用帮助, 查看可下载目录
 $ gt
+
 ```
 
 ## 问题及解决
