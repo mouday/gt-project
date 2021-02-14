@@ -4,19 +4,12 @@ macOS配置
 手动配置
 
 ```bash
-$ vim ~/.bash_profile
 
-# get template
-function gt() { wget https://raw.githubusercontent.com/mouday/gt-project/main/templates/$1-template.py ;}
+$ wget https://raw.githubusercontent.com/mouday/gt-project/main/gt.sh -O /usr/local/bin/gt
 
-$ source ~/.bash_profile
-```
+$ chmod +x /usr/local/bin/gt
 
-或者
-
-```bash
-echo "function gt() { wget https://raw.githubusercontent.com/mouday/gt-project/main/templates/$1-template.py ;}" >> \
-~/.bash_profile && source ~/.bash_profile
+$ gt
 ```
 
 
