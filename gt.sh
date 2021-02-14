@@ -24,7 +24,7 @@ url=https://raw.githubusercontent.com/mouday/gt-project/main/templates/$filename
 
 # 下载文件
 if [ $filename == 'list-template.txt' ]; then
-    echo 'gt <filename>';
+    echo 'eg: gt <filename>';
     curl $url;
 else
     wget $url;
