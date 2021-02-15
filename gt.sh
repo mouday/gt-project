@@ -1,5 +1,6 @@
 #!/bin/bash
 # 从github下载模板文件
+# version: 0.0.1
 
 # 拆分字符串为数组
 array=(`echo $1 | tr '.' ' '`)
@@ -17,16 +18,14 @@ if [ ! $ext ]; then
 fi;
 
 # 组合文件名
-filename="${name}-template.${ext}";
+filename="template-${name}.${ext}";
 echo "filename: ${filename}";
 
 url=https://raw.githubusercontent.com/mouday/gt-project/main/templates/$filename;
 
 # 下载文件
-if [ $filename == 'list-template.txt' ]; then
+if [ $filename == 'template-list.txt' ]; then
     echo 'eg: gt <filename>';
-    curl $url;
-else
-    wget $url;
 fi
 
+curl $url;
