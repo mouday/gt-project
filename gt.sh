@@ -19,7 +19,6 @@ fi;
 
 # 组合文件名
 filename="template-${name}.${ext}";
-echo "filename: ${filename}";
 
 url=https://raw.githubusercontent.com/mouday/gt-project/main/templates/$filename;
 
