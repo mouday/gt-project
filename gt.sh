@@ -20,7 +20,7 @@ fi;
 # 组合文件名
 filename="template-${name}.${ext}";
 
-url=https://raw.githubusercontent.com/mouday/gt-project/main/templates/$filename;
+url="https://raw.githubusercontent.com/mouday/gt-project/main/templates/${filename}";
 
 # 下载文件
 if [ $filename == 'template-list.txt' ]; then
