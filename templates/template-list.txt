@@ -6,3 +6,5 @@ list:
     vuex.vue
     axios.js
     token.js
+    global.js     # 自动导入Vue组件
+    permission.js # vue权限控制指令
