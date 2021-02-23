@@ -3,7 +3,7 @@
  * Vue.use(permission);
  */
 
-// 获取用户权限列表, 可以从cookie中获取
+// 获取当前用户权限列表, 可以从cookie中获取
 function getUserPermissions() {
   return ["user", "editor"];
 }
