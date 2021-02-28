@@ -9,3 +9,4 @@ list:
     global.js     # 自动导入Vue组件
     permission.js # Vue权限控制指令
     vue.html      # CDN方式使用Vue
+    pyenv.sh      # 通过gitee国内镜像安装pyenv

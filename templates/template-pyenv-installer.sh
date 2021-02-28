@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 ################################################
-#  通过国内镜像安装pyenv
+#  pyenv-installer.sh
+#  通过gitee国内镜像安装pyenv
 #  copy form https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer
 #  github: https://github.com/pyenv/pyenv-installer
 # 
@@ -105,6 +106,7 @@ if ! command -v pyenv 1>/dev/null; then
       echo 'status --is-interactive; and . (pyenv virtualenv-init -|psub)'
       ;;
     * )
+      echo "export PYTHON_BUILD_MIRROR_URL=https://npm.taobao.org/mirrors/python"
       echo "export PATH=\"${PYENV_ROOT}/bin:\$PATH\""
       echo "eval \"\$(pyenv init -)\""
       echo "eval \"\$(pyenv virtualenv-init -)\""
