@@ -10,3 +10,4 @@ list:
     permission.js # Vue权限控制指令
     vue.html      # CDN方式使用Vue
     pyenv.sh      # 通过gitee国内镜像安装pyenv
+    http-client.private.env.json
