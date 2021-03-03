@@ -35,6 +35,7 @@ config = {
 
 # 防止断开 see: https://github.com/coleifer/peewee/issues/1992
 class ReconnectMySQLDatabase(ReconnectMixin, MySQLDatabase):
+    """peewee作者不推荐使用"""
     pass
 
 
