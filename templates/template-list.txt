@@ -11,3 +11,5 @@ list:
     vue.html      # CDN方式使用Vue
     pyenv.sh      # 通过gitee国内镜像安装pyenv
     http-client.private.env.json
+    peewee.py
+    template-mysql.py
