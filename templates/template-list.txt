@@ -13,3 +13,4 @@ list:
     http-client.private.env.json
     peewee.py
     mysql.py
+    gitignore-python 
