@@ -19,6 +19,9 @@ $ chmod +x /usr/local/bin/gt
 # 3、下载flask模板文件
 $ gt flask.py
 
+# 强制从远端获取
+$ gt -f flask.py
+
 # 4、使用帮助, 查看可下载目录
 $ gt
 
