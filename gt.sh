@@ -13,8 +13,28 @@
 # eg: $ gt flask.py
 ###############################
 
+filename=''; # 文件名
+force=0;     # 强制
+
+# 接收可选参数 -f
+while getopts "f:" opt; do
+  case $opt in
+    f)
+      filename=$OPTARG
+      force=1
+      ;;
+    \?)
+      echo "Invalid option: -$OPTARG" 
+      ;;
+  esac
+done
+
 # 拆分字符串为数组
-array=(`echo $1 | tr '.' ' '`)
+if [ ! $filename ]; then
+    filename=$1;
+fi;
+
+array=(`echo $filename | tr '.' ' '`)
 
 name=${array[0]};
 ext=${array[1]};
@@ -54,6 +74,7 @@ file_template_url="${GT_URL}/${ext}/${name}.${ext}"
 # echo $GT_TEMPLATE_DIR
 # echo $file_template_path
 # echo $file_template_url
+# echo $force
 
 ###############################
 # 下载模板
@@ -67,9 +88,8 @@ download(){
     curl -L $file_template_url > $file_template_path;
 }
 
-
 # 文件存在则不下载
-if [ ! -f "$file_template_path" ]; then
+if [[ $force == 1 || ! -f "$file_template_path" ]]; then
 #   echo '不存在'
   download;
 fi

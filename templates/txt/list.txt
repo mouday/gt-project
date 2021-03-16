@@ -1,16 +1,25 @@
-list:
-    flask.py
-    express.js
-    vue.js
-    app.vue
-    vuex.vue
-    axios.js
-    token.js
-    global.js     # 自动导入Vue组件
-    permission.js # Vue权限控制指令
-    vue.html      # CDN方式使用Vue
-    pyenv.sh      # 通过gitee国内镜像安装pyenv
-    http-client.private.env.json
-    peewee.py
-    mysql.py
-    gitignore-python 
+.
+├── gitignore
+│   └── python.gitignore
+├── html
+│   └── vue.html
+├── js
+│   ├── axios.js
+│   ├── express.js
+│   ├── global.js
+│   ├── permission.js
+│   ├── token.js
+│   ├── vue.js
+│   └── vuex.js
+├── json
+│   └── http-client.private.env.json
+├── py
+│   ├── flask.py
+│   ├── mysql.py
+│   ├── peewee.py
+│   └── pyenv-installer.sh
+├── txt
+│   ├── list.txt
+│   └── version.txt
+└── vue
+    └── app.vue
