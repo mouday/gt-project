@@ -46,7 +46,7 @@ $ sudo vim /etc/hosts
 默认的参数配置，可通过修改环境变量重新配置
 ```bash
 GT_HOME='~/.gt'
-GT_TEMPLATE_DIR='~/.gt/templates'
+GT_TEMPLATE_DIR='~/.gt/templates'  # 本地缓存目录
 GT_URL="https://raw.githubusercontent.com/mouday/gt-project/main/templates"
 ```
 
