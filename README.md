@@ -54,6 +54,8 @@ GT_URL可以供选择的加速地址
 ```
 https://raw.staticdn.net/mouday/gt-project/main/templates
 
+https://ghproxy.com/https://raw.githubusercontent.com/mouday/gt-project/main/templates
+
 https://github3.mk-proxy.ml/-----https://raw.githubusercontent.com/mouday/gt-project/main/templates
 
 https://gh.api.99988866.xyz/https://raw.githubusercontent.com/mouday/gt-project/main/templates
