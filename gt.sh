@@ -1,6 +1,7 @@
 #!/bin/bash
 # 从github下载模板文件
 # version=0.0.2
+# 测试：cat gt.sh > /usr/local/bin/gt
 
 # 可配置的参数，设置默认值
 # GT_HOME='~/.gt'
@@ -18,8 +19,8 @@ array=(`echo $1 | tr '.' ' '`)
 name=${array[0]};
 ext=${array[1]};
 
-echo $name;
-echo $ext;
+# echo $name;
+# echo $ext;
 
 # # 给定默认值
 if [ ! $name ]; then
@@ -54,12 +55,16 @@ file_template_url="${GT_URL}/${ext}/${name}.${ext}"
 # echo $file_template_path
 # echo $file_template_url
 
+###############################
+# 下载模板
+###############################
+
 download(){
     if [ ! -d "$file_template_dir" ]; then
         mkdir -p $file_template_dir
     fi
 
-    curl $file_template_url > $file_template_path;
+    curl -L $file_template_url > $file_template_path;
 }
 
 
