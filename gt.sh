@@ -1,6 +1,16 @@
 #!/bin/bash
 # 从github下载模板文件
-# version: 0.0.1
+# version=0.0.2
+
+# 可配置的参数，设置默认值
+# GT_HOME='~/.gt'
+# GT_TEMPLATE_DIR='~/.gt/templates'
+# GT_URL="https://raw.githubusercontent.com/mouday/gt-project/main/templates"
+
+###############################
+# 处理输入参数
+# eg: $ gt flask.py
+###############################
 
 # 拆分字符串为数组
 array=(`echo $1 | tr '.' ' '`)
@@ -8,7 +18,10 @@ array=(`echo $1 | tr '.' ' '`)
 name=${array[0]};
 ext=${array[1]};
 
-# 给定默认值
+echo $name;
+echo $ext;
+
+# # 给定默认值
 if [ ! $name ]; then
     name='list';
 fi;
@@ -17,14 +30,43 @@ if [ ! $ext ]; then
     ext='txt';
 fi;
 
-# 组合文件名
-filename="template-${name}.${ext}";
-
-url="https://raw.githubusercontent.com/mouday/gt-project/main/templates/${filename}";
-
-# 下载文件
-if [ $filename == 'template-list.txt' ]; then
-    echo 'eg: gt <filename>';
+# 模板家目录
+if [ -z "$GT_HOME" ]; then
+  GT_HOME="${HOME}/.gt"
 fi
 
-curl $url;
+# 模板缓存目录
+if [ -z "$GT_TEMPLATE_DIR" ]; then
+  GT_TEMPLATE_DIR="${GT_HOME}/templates"
+fi
+
+# 模板下载地址
+if [ -z "$GT_URL" ]; then
+  GT_URL="https://raw.githubusercontent.com/mouday/gt-project/main/templates"
+fi
+
+file_template_dir="${GT_TEMPLATE_DIR}/${ext}"
+file_template_path="${file_template_dir}/${name}.${ext}"
+file_template_url="${GT_URL}/${ext}/${name}.${ext}"
+
+# echo $GT_HOME
+# echo $GT_TEMPLATE_DIR
+# echo $file_template_path
+# echo $file_template_url
+
+download(){
+    if [ ! -d "$file_template_dir" ]; then
+        mkdir -p $file_template_dir
+    fi
+
+    curl $file_template_url > $file_template_path;
+}
+
+
+# 文件存在则不下载
+if [ ! -f "$file_template_path" ]; then
+#   echo '不存在'
+  download;
+fi
+
+cat $file_template_path;
