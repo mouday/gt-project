@@ -42,7 +42,7 @@ ext=${array[1]};
 # echo $name;
 # echo $ext;
 
-# # 给定默认值
+# 给定默认值
 if [ ! $name ]; then
     name='list';
 fi;

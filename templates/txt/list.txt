@@ -1,6 +1,7 @@
 .
 ├── gitignore
-│   └── python.gitignore
+│   ├── python.gitignore
+│   └── js.gitignore
 ├── html
 │   └── vue.html
 ├── js
