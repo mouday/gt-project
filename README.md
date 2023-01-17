@@ -2,6 +2,8 @@
 
 gt(意为：get)是一个快速生成单文件代码模板的命令行工具
 
+https://github.com/mouday/gt-project
+
 ## 安装 
 
 macOS配置
